@@ -1,0 +1,38 @@
+:root {
+  --bg: #fdfdfd;
+  --text: #222;
+  --accent: #4a90e2;
+}
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+header {
+  background: var(--accent);
+  color: white;
+  padding: 1rem;
+}
+header h1 {
+  margin: 0;
+}
+nav .menu {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 1rem;
+}
+nav .menu li a {
+  color: white;
+  text-decoration: none;
+}
+main {
+  padding: 1rem;
+}
+footer {
+  background: var(--accent);
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
