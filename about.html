@@ -1,29 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>About – Tsukizzh</title>
-  <link rel="stylesheet" href="assets/css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About · Tsukizzh</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
-  <header>
-    <h1>About Me</h1>
-    <nav>
+  <header class="site-header">
+    <nav class="nav">
+      <span class="brand"><span class="brand-badge"></span> Tsukizzh</span>
       <ul class="menu">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="projects.html">Projects</a></li>
+        <li><a href="./">Home</a></li>
+        <li><a href="./projects.html">Projects</a></li>
+        <li><a class="active" href="./about.html">About</a></li>
       </ul>
     </nav>
   </header>
-  <main>
-    <section class="about">
-      <p>Hello! I'm Tsukizzh. This page is a little bit about me. I'm passionate about technology and web development.</p>
-    </section>
+
+  <main class="container section">
+    <div class="grid" style="grid-template-columns:1.1fr 1fr">
+      <section class="card">
+        <h2>About</h2>
+        <p>Write a short, confident bio. Mention your domain strengths and what you like to build. Keep it crisp and human.</p>
+        <ul>
+          <li>Focus: data apps, visualization, UX</li>
+          <li>Stack: JS/TS, Python, modern tooling</li>
+          <li>Location: Taiwan</li>
+        </ul>
+      </section>
+
+      <aside class="card">
+        <h3>Contact</h3>
+        <p class="kv">Email · <a href="mailto:example@example.com">example@example.com</a></p>
+        <p class="kv">GitHub · <a href="https://github.com/Tsukizzh" target="_blank" rel="noopener">Tsukizzh</a></p>
+      </aside>
+    </div>
   </main>
-  <footer>
-    <p>&copy; <span id="year"></span> Tsukizzh.</p>
+
+  <footer class="site-footer">
+    <div class="container"><div class="copy">© <span id="year"></span> Tsukizzh</div></div>
   </footer>
-  <script src="assets/js/main.js"></script>
+  <script>document.getElementById('year').textContent=new Date().getFullYear()</script>
 </body>
 </html>

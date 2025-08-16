@@ -1,37 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Tsukizzh's Personal Homepage</title>
-  <link rel="stylesheet" href="assets/css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tsukizzh · Homepage</title>
+  <meta name="description" content="Tsukizzh — personal site & portfolio">
+  <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
-  <header>
-    <h1>Tsukizzh</h1>
-    <nav>
+  <header class="site-header">
+    <nav class="nav">
+      <span class="brand"><span class="brand-badge"></span> Tsukizzh</span>
       <ul class="menu">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="projects.html">Projects</a></li>
+        <li><a class="active" href="./">Home</a></li>
+        <li><a href="./projects.html">Projects</a></li>
+        <li><a href="./about.html">About</a></li>
       </ul>
     </nav>
   </header>
-  <main>
-    <section class="intro">
-      <h2>Welcome!</h2>
-      <p>Welcome to my personal website. Here you'll find information about me and my work.</p>
-    </section>
-    <section class="contact">
-      <h2>Contact</h2>
-      <ul>
-        <li>Email: <a href="mailto:example@example.com">example@example.com</a></li>
-        <li>GitHub: <a href="https://github.com/Tsukizzh" target="_blank">Tsukizzh</a></li>
-      </ul>
-    </section>
+
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-wrap">
+      <div class="badge">Available for collaboration</div>
+      <h1>Hi, I’m <span style="background:linear-gradient(135deg,var(--accent),var(--accent-2));-webkit-background-clip:text;background-clip:text;color:transparent">Tsukizzh</span>.</h1>
+      <p class="subtitle">I build neat things with data, code and clean design. This site showcases selected work, notes, and experiments.</p>
+      <div class="cta">
+        <a class="btn" href="projects.html">See Projects</a>
+        <a class="btn outline" href="mailto:example@example.com">Contact</a>
+      </div>
+    </div>
+  </section>
+
+  <main class="container section">
+    <div class="section-title">
+      <h2>Highlights</h2>
+      <span class="kv">Last update: <time id="last-update"></time></span>
+    </div>
+
+    <div class="grid">
+      <article class="card">
+        <h3>What I Do</h3>
+        <p>Data-driven apps, interactive visuals, and polished UX. Strong focus on performance and readability.</p>
+        <div class="badge">JavaScript · Python · UI</div>
+      </article>
+
+      <article class="card">
+        <h3>Now</h3>
+        <p>Exploring model visualization and lightweight analytics dashboards.</p>
+        <div class="badge">Research & Build</div>
+      </article>
+
+      <article class="card">
+        <h3>Links</h3>
+        <p><a href="https://github.com/Tsukizzh" target="_blank" rel="noopener">GitHub</a> · <a href="#" target="_blank" rel="noopener">LinkedIn</a> · <a href="#" target="_blank" rel="noopener">X</a></p>
+      </article>
+    </div>
   </main>
-  <footer>
-    <p>&copy; <span id="year"></span> Tsukizzh. All rights reserved.</p>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="copy">© <span id="year"></span> Tsukizzh. All rights reserved.</div>
+      <div class="links">
+        <a href="mailto:example@example.com">Email</a>
+        <a href="./projects.html">Projects</a>
+        <a href="./about.html">About</a>
+      </div>
+    </div>
   </footer>
-  <script src="assets/js/main.js"></script>
+
+  <script>
+    // footer year & last update
+    document.getElementById('year').textContent = new Date().getFullYear();
+    document.getElementById('last-update').textContent = new Date().toLocaleDateString();
+  </script>
 </body>
 </html>

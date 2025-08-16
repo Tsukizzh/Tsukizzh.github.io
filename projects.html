@@ -1,33 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Projects – Tsukizzh</title>
-  <link rel="stylesheet" href="assets/css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Projects · Tsukizzh</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
-  <header>
-    <h1>Projects</h1>
-    <nav>
+  <header class="site-header">
+    <nav class="nav">
+      <span class="brand"><span class="brand-badge"></span> Tsukizzh</span>
       <ul class="menu">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="projects.html">Projects</a></li>
+        <li><a href="./">Home</a></li>
+        <li><a class="active" href="./projects.html">Projects</a></li>
+        <li><a href="./about.html">About</a></li>
       </ul>
     </nav>
   </header>
-  <main>
-    <section class="projects">
-      <p>Here are some of my projects:</p>
-      <ul>
-        <li><strong>Project 1:</strong> Description of project 1.</li>
-        <li><strong>Project 2:</strong> Description of project 2.</li>
-      </ul>
-    </section>
+
+  <main class="container section">
+    <div class="section-title"><h2>Selected Projects</h2></div>
+    <div class="grid">
+      <article class="card">
+        <h3>Project One</h3>
+        <p>One-liner value prop. What it does, tech stack, and the outcome.</p>
+        <p class="badge">Demo · <a href="#" target="_blank" rel="noopener">Live</a></p>
+        <p class="badge">Code · <a href="https://github.com/Tsukizzh/project-one" target="_blank" rel="noopener">GitHub</a></p>
+      </article>
+
+      <article class="card">
+        <h3>Project Two</h3>
+        <p>Short description. Keep it concrete—numbers are great.</p>
+        <p class="badge">Tech · JS · Python</p>
+      </article>
+
+      <article class="card">
+        <h3>Project Three</h3>
+        <p>Another crisp summary with outcome/impact.</p>
+        <p class="badge">Design · UX</p>
+      </article>
+    </div>
   </main>
-  <footer>
-    <p>&copy; <span id="year"></span> Tsukizzh.</p>
+
+  <footer class="site-footer">
+    <div class="container"><div class="copy">© <span id="year"></span> Tsukizzh</div></div>
   </footer>
-  <script src="assets/js/main.js"></script>
+  <script>document.getElementById('year').textContent=new Date().getFullYear()</script>
 </body>
 </html>
